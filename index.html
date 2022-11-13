@@ -22,7 +22,7 @@ window.onload = function() {
 </head>
     <body>
  
-        <audio autoplay="autoplay">
+        <audio id="audio">
             <source src="./music/I-Do-911.mp3" type="audio/mpeg">
         </audio>
 
@@ -35,9 +35,9 @@ window.onload = function() {
 						<span class="say">Знаешь, я давно хотел тебе сказать, что ты для меня самая красивая девушка, которую я встречал.</span><br>
 						<span class="say">Ты очень умная, интересная и симпатичная. Мне очень нравится с тобой общаться.</span><br>
 						<span class="say">Не знаю почему, но я всё больше и больше хочу делить свою жизнь с тобой каждый день.</span><br>
-						<span class="say">Тем более, что мои чувства к тебе становятся глубже, и я начинаю влюбляться в тебя...</span><br>
+						<span class="say">Тем более, мои чувства к тебе становятся глубже, и я начинаю влюбляться в тебя...</span><br>
 						<span class="say"> </span><br>
-						<span class="say">Хотел бы спросить, даёшь ли мне шанс, чтобы я мог знать тебя лучше? :)</span><br>
+						<span class="say">Хотел бы спросить, будешь ли ты давать мне шанс, чтобы я мог знать тебя лучше? :)</span><br>
                         <span class="say"><span class="space"><img src="image/tym.png" alt=""><br>
                         <span class="say"><span class="space"></span> --Mrtrieu69-- </span>
 			        </font>
@@ -110,6 +110,8 @@ window.onload = function() {
             var offset = canvas.offset(), x, y;
             x = e.pageX - offset.left;
             y = e.pageY - offset.top;
+            const audio = document.querySelector("#audio")
+            audio.play()
             if (seed.hover(x, y)) {
                 hold = 0; 
                 canvas.unbind("click");
